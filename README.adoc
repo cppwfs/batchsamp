@@ -1,0 +1,14 @@
+# Batch Autowire Hiccup
+
+Exhibits behavior of Autowiring JobBuilderFactory in 2.6.0.M2 causes circular bean reference.
+
+## Notes:
+* Removing the DataSource will prevent the circular reference exception
+* Passing the  JobBuilderFactory and StepBuilderFactory beans via the constructor  will prevent the circular reference.
+
+## Build
+
+```
+mvn clean package
+```
+
